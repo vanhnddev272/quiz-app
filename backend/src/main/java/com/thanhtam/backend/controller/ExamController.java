@@ -542,9 +542,9 @@ public class ExamController {
         User user = userService.getUserByUsername(username).get();
         Date now = new Date();
         Exam exam = examService.getExamById(id).get();
-        if (exam.getBeginExam().compareTo(now) > 0) {
+        if (exam.getBeginExam().compareTo(now) < 0) {
 
-//            exam.setCanceled(true);
+            exam.setCanceled(true);
             examService.cancelExam(id);
             logger.error("LLLLL");
 

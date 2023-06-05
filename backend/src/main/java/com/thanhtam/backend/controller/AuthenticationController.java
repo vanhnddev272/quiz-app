@@ -74,9 +74,6 @@ public class AuthenticationController {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(item -> item.getAuthority())
                 .collect(Collectors.toList());
-
-
-
         User userLog = userService.getUserByUsername(userDetails.getUsername()).get();
         userLog.setLastLoginDate(new Date());
         userService.updateUser(userLog);

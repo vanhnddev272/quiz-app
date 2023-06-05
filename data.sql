@@ -451,7 +451,7 @@ CREATE TABLE `users` (
   `intake_id` bigint DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`),
-  KEY `FKof44u64o1d7scaukghm9veo23` (`profile_id`),
+  KEY `FKof44u64o1d7scaukghm9veo23` (`profile_id`),hibernate_sequence
   KEY `FKoyj5ikudsy54xbe8yl82mhquy` (`intake_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=349 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
